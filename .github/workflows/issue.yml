@@ -2,6 +2,7 @@ on: issue_comment
 
 jobs:
   test:
+    if: github.event.issue.pull_request && startsWith(github.event.comment.body, '@benchmark') && github.triggering_actor == github.repository_owner
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
