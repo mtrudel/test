@@ -33,6 +33,8 @@ defmodule TestWeb.Endpoint do
     plug Phoenix.CodeReloader
   end
 
+  socket "/socket", TestWeb.UserSocket
+
   plug Phoenix.LiveDashboard.RequestLogger,
     param_key: "request_logger",
     cookie_key: "request_logger"
