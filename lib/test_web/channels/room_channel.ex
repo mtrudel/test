@@ -8,4 +8,8 @@ defmodule TestWeb.RoomChannel do
   def handle_in("ping", _msg, socket) do
     {:reply, {:ok, "pong"}, socket}
   end
+
+  def terminate(_reason, _socket) do
+    :ok
+  end
 end

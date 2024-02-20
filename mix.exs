@@ -32,6 +32,8 @@ defmodule Test.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:recon, "~> 2.5"},
+      {:plug_cowboy, ">= 0.0.0"},
       {:phoenix, "~> 1.7.11"},
       {:phoenix_html, "~> 4.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
@@ -54,7 +56,7 @@ defmodule Test.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
-      {:bandit, "~> 1.2"}
+      {:bandit, path: "../bandit", override: true}
     ]
   end
 

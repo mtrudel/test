@@ -16,7 +16,8 @@ defmodule Test.Application do
       # Start a worker by calling: Test.Worker.start_link(arg)
       # {Test.Worker, arg},
       # Start to serve requests, typically the last entry
-      TestWeb.Endpoint
+      TestWeb.Endpoint,
+      Test.Dumper
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
